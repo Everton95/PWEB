@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Media.html</title>
+   <script>
+  function SeuNome(msg){
+			alert(msg);
+			var x = "Olá,&nbsp"  + prompt('Qual é o seu nome?')+ '!';
+			document.getElementById('seunome').innerHTML = x;
+			return x;
+		} </script>
+   
+   Primeira nota <input id="nota1" type="number"> <br />
+   Segunda  nota <input id="nota2" type="number"> <br />
+   Terceira nota <input id="nota3" type="number"> <br />
+   <button onclick="media()">Calcular Media</button>
+
+   <script type="text/javascript">
+
+    function media(){
+     var nota1 = parseFloat(document.getElementById("nota1").value);
+     var nota2 = parseFloat(document.getElementById("nota2").value);
+	  var nota3 = parseFloat(document.getElementById("nota3").value);
+
+     var media = (nota1 + nota2 + nota3)/3 ;
+
+     document.getElementById('media').innerHTML = media;
+			return media;
+
+    }
+ </script>
+ </head>
+ <body>
+	<p id="seunome"></p>
+		<script>
+		SeuNome("Olá");
+		</script>
+	
+	<p id='media'>Sua nota</p>
+		
+		<script>
+	    nota();
+		</script>
+		<script>
+		soma();
+		</script>		
+</body>
+</html>
